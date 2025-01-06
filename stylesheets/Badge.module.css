@@ -1,0 +1,15 @@
+.container {
+  width: 67px;
+  height: 24px;
+  background-color: #F3F4F6;
+  padding: 2px 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.11s ease-in-out;
+}
+
+.container.toggle {
+  border-radius: 12px;
+}

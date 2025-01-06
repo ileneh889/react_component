@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Karla', sans-serif;
+    background-color: rgb(226, 224, 224); 
+}
+
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

@@ -1,0 +1,56 @@
+/* Popup.css */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* above all */
+  z-index: 1000;
+  /* 動畫部分 */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 動畫部分 */
+.popupOverlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popupContent {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* 動畫部分 */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* 動畫部分：確定parent show之後，移動到畫面中心 */
+.popupOverlay.show .popupContent {
+  transform: translateY(0);
+}
+
+.popupClose {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.popupChild {
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
+}
